@@ -1,6 +1,6 @@
 # Yamaguchi-first-layout
 
-### [Демо](https://github.com/SubbotinRoman/Yamaguchi-first-layout.git) 👈
+### [Демо](https://subbotinroman.github.io/yamaguchi-first-layout/) 👈
 
 ## Описание
 
