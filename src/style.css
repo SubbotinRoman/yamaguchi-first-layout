@@ -1,0 +1,10 @@
+@import 'normalize.css';
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --second-family: 'Ubuntu', sans-serif;
+  --third-family: 'Cy Grotesk', sans-serif;
+  --font3: 'Bebas Neue', sans-serif;
+}
+
+
