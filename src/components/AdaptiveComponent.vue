@@ -203,20 +203,20 @@
     }
 
     .table-container__image-top {
-        top: -580px;
+        top: -630px;
         width: 150%;
         left: -20%;
     }
 
     .table-container__image-legs {
-        top: -580px;
+        top: -630px;
         width: 150%;
         left: -20%;
     }
 
     .table-container__buttons {
         width: 100%;
-        bottom: 750px;
+        bottom: 840px;
         gap: 15px;
         left: -20%;
     }
@@ -266,7 +266,7 @@
     .text-container__second-description {
         position: relative;
         margin-top: 1rem; 
-        margin-bottom: -13rem;
+        margin-bottom: -10rem;
     }
 
     br {
