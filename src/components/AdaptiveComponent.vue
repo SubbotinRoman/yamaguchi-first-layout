@@ -1,248 +1,260 @@
 <template>
-  <div class="adaptive-component">
+    <div class="wrapper">
+        <!-- Блок с изображением стола и кнопками -->
+        <div class="table-container">
+            <img
+                class="table-container__image-top"
+                src="../assets/table-top.png"
+                :style="{ transform: `translateY(${tablePosition}px)` }"
+                alt="Столешница"
+            />
+            <img
+                class="table-container__image-legs"
+                src="../assets/table-legs.png"
+                alt="Ножки стола"
+            />
+            <!-- Кнопки  -->
+            <div class="table-container__buttons">
+                <button @click="moveUp" class="table-container__button-up">
+                    <span class="table-container__button-text">вверх</span>
+                </button>
 
-    <!-- Блок с изображением стола и кнопками -->
-    <div class="table-container">
-      <!-- Изображение ножек стола -->
-      <img
-          class="table-container__image table-container__image--legs"
-          src="../assets/table-legs.png"
-          alt="Ножки стола"
-      />
-
-      <!-- Изображение столешницы с динамическим изменением позиции -->
-      <img
-          class="table-container__image table-container__image--top"
-          src="../assets/table-top.png"
-          :style="{ transform: `translateY(${tablePosition}px)` }"
-          alt="Столешница"
-      />
-      <div class="table-container__buttons">
-        <!-- Кнопка для подъема столешницы -->
-        <button @click="moveUp" class="table-container__button table-container__button--up">
-          <span class="table-container__button-text">вверх</span>
-        </button>
-
-        <!-- Кнопка для опускания столешницы -->
-        <button @click="moveDown" class="table-container__button table-container__button--down">
-          <span class="table-container__button-text">вниз</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Текстовый блок с заголовком и описанием -->
-    <div class="adaptive-component__text adaptive-component__text--first">
-
-      <div class="adaptive-component__title">
-        Эргономика — <br />
-        ключ к успеху <br />
-        современного <br />
-        человека
-      </div>
-
-      <!-- Первое текстовое описание -->
-      <div class="adaptive-component__description">
-        Стильная столешница, выполненной <br /> из экологически безопасного материала (ДСП), <br /> и усиленной
-        стальной рамы не составит труда <br /> разместить на поверхности инновационного <br /> стола большое
-        количество крупногабаритной <br /> техники: стол выдерживает нагрузку до 80 кг.
-      </div>
-
-      <!-- Второе текстовое описание -->
-      <div class="adaptive-component__text adaptive-component__text--second">
-        <div class="adaptive-component__description">
-          Также столешница, обладающая меламиновым <br /> покрытием, хорошо переносит механические <br />
-          воздействия (царапины или удары), <br /> при контакте с водой не разрушается, устойчиво <br /> переносит
-          бытовые химические вещества <br /> и не выгорает под воздействием <br /> ультрафиолета.
+                <button @click="moveDown" class="table-container__button-down">
+                    <span class="table-container__button-text">вниз</span>
+                </button>
+            </div>
         </div>
-      </div>
 
+        <!-- Текстовый блок с заголовком и описанием -->
+        <div class="text-container">
+            <div class="text-container__title">
+                Эргономика — <br />
+                ключ к успеху <br />
+                современного <br />
+                человека
+            </div>
+
+            <!-- Первое текстовое описание -->
+            <div class="text-container__first-description">
+                Стильная столешница, выполненной <br />
+                из экологически безопасного материала (ДСП), <br />
+                и усиленной стальной рамы не составит труда <br />
+                разместить на поверхности инновационного <br />
+                стола большое количество крупногабаритной <br />
+                техники: стол выдерживает нагрузку до 80 кг.
+            </div>
+
+            <!-- Второе текстовое описание -->
+            <div class="text-container__second-description">
+                Также столешница, обладающая меламиновым <br />
+                покрытием, хорошо переносит механические <br />
+                воздействия (царапины или удары), <br />
+                при контакте с водой не разрушается, устойчиво <br />
+                переносит бытовые химические вещества <br />
+                и не выгорает под воздействием <br />
+                ультрафиолета.
+            </div>
+        </div>
     </div>
-
-
-  </div>
 </template>
 
 <style scoped>
-/* Общие стили */
-.adaptive-component {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  padding: 2rem;
-  max-width: 1920px;
-  max-height: 900px;
-
-}
-
-.adaptive-component__title {
-  color: #0b64fe;
-  font-size: 2rem;
-  font-family: var(--second-family);
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  text-align: left;
-  max-width: 647px;
-  max-height: 219px;
-}
-
-.adaptive-component__text {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  max-width: 500px;
-  max-height: 416px;
-}
-
-.adaptive-component__description {
-  color: #181818;
-  font-size: 1rem;
-  font-family: var(--second-family);
-  font-weight: 300;
-  text-align: left;
-  margin-bottom: 1rem;
-  line-height: 170%;
-  max-width: 500px;
-  max-height: 416px;
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 .table-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: -30px;
-  max-width: 1477px;
-  max-height: 985px;
-  margin-right: 70px;
+    position: absolute;
+    max-width: 1476.76px;
+    max-height: 984.7px;
 }
 
-.table-container__image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.table-container__image-top {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    z-index: 1;
 }
 
-.table-container__image--top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 130%;
-}
-
-.table-container__image--legs {
-  position: relative;
-  z-index: 0;
-  width: 130%;
+.table-container__image-legs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    z-index: 0;
 }
 
 .table-container__buttons {
-  position: absolute;
-  bottom: 150px;
-  left: 48%;
-  transform: translateX(0);
-  display: flex;
-  gap: 1rem;
-  z-index: 2;
-  font-family: var(--second-family);
-  text-transform: uppercase;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    bottom: 290px;
+    z-index: 2;
+    gap: 30px;
 }
 
-.table-container__button {
-  background: #a6ffff;
-  border: none;
-  border-radius: 50%;
-  color: black;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6rem;
-  height: 6rem;
-  transition: background 0.3s ease;
+.table-container__button-up,
+.table-container__button-down {
+    background: rgb(166, 255, 255);
+    border-radius: 50%;
+    border: none;
+    width: 120.22px;
+    height: 120.22px;
 }
 
 .table-container__button-text {
-  font-family: var(--second-family);
-  font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 170%;
-  color: #000;
-}
-
-.table-container__button:hover {
-  background: #7de0ff;
-}
-
-/* Медиазапрос для экрана 320x998 */
-@media (max-width: 320px) and (max-height: 998.41px) {
-  .adaptive-component {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    width: 100vw;
-  }
-
-  .table-container {
-    order: 2;
-    margin-top: -150px;
-    margin-bottom: 1.5rem;
-    width: 90vw;
-  }
-
-  .adaptive-component__title {
-    text-align: left;
-    font-size: 1.5rem;
-    font-weight: 900;
-  }
-
-  .adaptive-component__text--first {
-    order: 1;
-    margin-bottom: 10px;
-  }
-
-  .adaptive-component__text--second {
-    order: 3;
-    margin-top: 190px;
-  }
-
-  .adaptive-component__text {
-    width: 100%;
-    text-align: center;
-  }
-
-  .adaptive-component__description {
-    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-family: var(--second-family);
+    font-size: 1.1rem;
+    font-weight: 300;
     line-height: 170%;
-  }
-
-  .table-container__image {
-    width: 100%;
-  }
-
-  .table-container__button {
-    width: 3rem;
-    height: 3rem;
-    font-size: 0.7rem;
-  }
-
-  .table-container__buttons {
-    bottom: 20%;
-    transform: translateX(-46%);
-    width: 50vw;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .table-container__button-text {
-    font-size: 0.7rem;
-  }
+    letter-spacing: 0%;
+    text-align: center;
 }
 
+.text-container {
+    position: absolute;
+    left: 60%;
+    width: 70%;
+}
+
+.text-container__title {
+    position: relative;
+    color: rgb(11, 100, 254);
+    font-family: var(--second-family);
+    font-size: 2.3rem;
+    font-weight: 300;
+    letter-spacing: 0%;
+    text-align: left;
+    top: 25.59px;
+}
+
+.text-container__first-description {
+    position: relative;
+    top: 2.5rem;
+}
+
+.text-container__second-description {
+    position: relative;
+    top: 3.5rem;
+}
+
+.text-container__first-description,
+.text-container__second-description {
+    color: rgb(24, 24, 24);
+    font-family: var(--second-family);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 170%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .table-container {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        order: 2;
+    }
+
+    .table-container__image-top,
+    .table-container__image-legs {
+        width: 100%;
+        height: auto;
+        bottom: 160px;
+    }
+
+    .table-container__image-top {
+        top: -330px;
+        width: 150%;
+        left: -25%;
+    }
+
+    .table-container__image-legs {
+        top: -330px;
+        width: 150%;
+        left: -25%;
+    }
+
+    .table-container__buttons {
+        width: 100%;
+        bottom: 450px;
+        gap: 15px;
+    }
+
+    .table-container__button-up,
+    .table-container__button-down {
+        width: 70px;
+        height: 70px;
+    }
+
+    .table-container__button-text {
+        font-size: 0.7rem;
+    }
+
+    .text-container {
+        position: relative;
+        left: 0;
+        width: 100%;
+        order: 1;
+    }
+
+    .text-container__title {
+        font-family: var(--fourth-family);
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+        top: 13.57px;
+        padding-left: 12.12px;
+        padding-right: 12.12px;
+    }
+
+    .text-container__first-description,
+    .text-container__second-description {
+        font-size: 1rem;
+        top: 1rem;
+        margin-bottom: 23rem;
+        padding-left: 12.12px;
+        padding-right: 12.12px;
+    }
+
+    .text-container__first-description {
+        padding-top: 1rem;
+    }
+
+    .text-container__second-description {
+        margin-top: 1rem;
+        margin-bottom: -15rem;
+    }
+
+    br {
+        display: none;
+    }
+}
 </style>
 
 <script setup>
@@ -257,17 +269,17 @@ const minPosition = -20; // Максимальное опускание
 
 // Функция для подъема столешницы
 const moveUp = () => {
-  // Проверяем, меньше ли текущее значение максимального опускания
-  if (tablePosition.value > minPosition) {
-    tablePosition.value -= 10; // Двигаем вверх на 10px
-  }
+    // Проверяем, меньше ли текущее значение максимального опускания
+    if (tablePosition.value > minPosition) {
+        tablePosition.value -= 10; // Двигаем вверх на 10px
+    }
 };
 
 // Функция для опускания столешницы
 const moveDown = () => {
-  // Проверяем, больше ли текущее значение максимального подъема
-  if (tablePosition.value < maxPosition) {
-    tablePosition.value += 10; // Двигаем вниз на 10px
-  }
+    // Проверяем, больше ли текущее значение максимального подъема
+    if (tablePosition.value < maxPosition) {
+        tablePosition.value += 10; // Двигаем вниз на 10px
+    }
 };
 </script>
