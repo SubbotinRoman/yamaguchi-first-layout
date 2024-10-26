@@ -63,13 +63,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .table-container {
@@ -125,8 +125,8 @@
     background: rgb(166, 255, 255);
     border-radius: 50%;
     border: none;
-    width: 120.22px;
-    height: 120.22px;
+    width: 110.22px;
+    height: 110.22px;
 }
 
 .table-container__button-text {
@@ -172,16 +172,16 @@
     position: relative;
     color: rgb(24, 24, 24);
     font-family: var(--second-family);
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 300;
     line-height: 170%;
     letter-spacing: 0%;
     text-align: left;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     .wrapper {
-        flex-direction: column; 
+        flex-direction: column;
         height: auto;
         min-height: 100vh;
         margin: 0;
@@ -203,20 +203,20 @@
     }
 
     .table-container__image-top {
-        top: -440px;
+        top: -550px;
         width: 150%;
         left: -17%;
     }
 
     .table-container__image-legs {
-        top: -440px;
+        top: -550px;
         width: 150%;
         left: -17%;
     }
 
     .table-container__buttons {
         width: 100%;
-        bottom: 650px;
+        bottom: 720px;
         gap: 15px;
         left: -17%;
     }
@@ -240,7 +240,7 @@
 
     .text-container__title {
         font-family: var(--fourth-family);
-        font-size: 2.9rem;
+        font-size: 2.6rem;
         font-weight: 600;
         line-height: 100%;
         letter-spacing: 0%;
@@ -252,7 +252,7 @@
 
     .text-container__first-description,
     .text-container__second-description {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         top: 1rem;
         margin-bottom: 30rem;
         padding-left: 12.12px;
@@ -260,13 +260,12 @@
     }
 
     .text-container__first-description {
-        padding-top: 1rem;
-        
+        padding-top: 3rem;
     }
 
     .text-container__second-description {
         margin-top: 1rem;
-        margin-bottom: -20rem;
+        margin-bottom: -15rem;
     }
 
     br {
