@@ -190,7 +190,7 @@
 
     .table-container {
         position: relative;
-        width: 150%;
+        width: 165%;
         max-width: none;
         order: 2;
     }
@@ -203,22 +203,22 @@
     }
 
     .table-container__image-top {
-        top: -550px;
+        top: -580px;
         width: 150%;
-        left: -17%;
+        left: -20%;
     }
 
     .table-container__image-legs {
-        top: -550px;
+        top: -580px;
         width: 150%;
-        left: -17%;
+        left: -20%;
     }
 
     .table-container__buttons {
         width: 100%;
-        bottom: 720px;
+        bottom: 750px;
         gap: 15px;
-        left: -17%;
+        left: -20%;
     }
 
     .table-container__button-up,
@@ -252,7 +252,7 @@
 
     .text-container__first-description,
     .text-container__second-description {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         top: 1rem;
         margin-bottom: 30rem;
         padding-left: 12.12px;
@@ -264,8 +264,9 @@
     }
 
     .text-container__second-description {
-        margin-top: 1rem;
-        margin-bottom: -15rem;
+        position: relative;
+        margin-top: 1rem; 
+        margin-bottom: -13rem;
     }
 
     br {
