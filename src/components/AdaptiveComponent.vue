@@ -198,20 +198,17 @@
     .table-container__image-top {
         top: -630px;
         width: 150%;
-        left: -20%;
     }
 
     .table-container__image-legs {
         top: -630px;
         width: 150%;
-        left: -20%;
     }
 
     .table-container__buttons {
         width: 100%;
         bottom: 840px;
         gap: 15px;
-        left: -20%;
     }
 
     .table-container__button-up,
