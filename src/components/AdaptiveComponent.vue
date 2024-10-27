@@ -155,7 +155,7 @@
     position: relative;
     color: rgb(24, 24, 24);
     font-family: var(--second-family);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 170%;
     letter-spacing: 0%;
