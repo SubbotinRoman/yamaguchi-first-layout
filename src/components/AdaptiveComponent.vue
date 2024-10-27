@@ -207,7 +207,7 @@
 
     .table-container__buttons {
         width: 100%;
-        bottom: 840px;
+        bottom: 820px;
         gap: 15px;
     }
 
