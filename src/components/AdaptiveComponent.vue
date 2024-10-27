@@ -143,7 +143,7 @@
     position: relative;
     color: rgb(11, 100, 254);
     font-family: var(--second-family);
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     font-weight: 300;
     letter-spacing: 0%;
     text-align: left;
