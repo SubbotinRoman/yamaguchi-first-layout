@@ -1,19 +1,17 @@
 @import 'normalize.css';
 
-
 :root {
-  --font-family: 'Montserrat', sans-serif;
-  --second-family: 'Ubuntu', sans-serif;
-  --third-family: 'Cy Grotesk', sans-serif;
-  --fourth-family: 'Bebas Neue', sans-serif;
+    --font-family: 'Montserrat', sans-serif;
+    --second-family: 'Ubuntu', sans-serif;
+    --third-family: 'Cy Grotesk', sans-serif;
+    --fourth-family: 'Bebas Neue', sans-serif;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
-
-
